@@ -1,9 +1,5 @@
 {% load static %}
-{% load l10n %} 
-
-
-<header>
- <!-- light-dark mode button -->
+<!-- light-dark mode button -->
  <a href="javascript: void(0);" id="mode" class="mode-btn text-white rounded-end">
   <i class="uil uil-brightness mode-dark mx-auto"></i>
   <i class="uil uil-moon bx-spin mode-light"></i>
@@ -14,7 +10,7 @@
   <div class="container-fluid">
 
       <!-- LOGO -->
-      <a class="navbar-brand logo text-uppercase" href="index-1.html">
+      <a class="navbar-brand logo text-uppercase" href="/">
           <img src="{% static 'images/logo-light.png' %}" class="logo-light" alt="" height="30">
           <img src="{% static 'images/logo-dark.png' %}" class="logo-dark" alt="" height="30">
       </a>
@@ -24,43 +20,46 @@
           <span class="mdi mdi-menu"></span>
       </button>
 
-      <div class="collapse navbar-collapse" id="navbarCollapse">
+      <div class="collapse navbar-collapse ms-auto" id="navbarCollapse">
           <ul class="navbar-nav ms-auto" id="navbar-navlist">
               <li class="nav-item">
-                  <a class="nav-link" href="#home">Home</a>
+                  <a class="nav-link" href="/">Главная</a>
               </li>
               <li class="nav-item">
-                  <a class="nav-link" href="#service">Services</a>
+                  <a class="nav-link" href="#cta">О нас</a>
               </li>
               <li class="nav-item">
-                  <a class="nav-link" href="#features">Features</a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link" href="#pricing">Pricing</a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link" href="#app">Application</a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link" href="#team">Team</a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link" href="#contact">Contact</a>
+                  <a class="nav-link" href="#contact">Контакты</a>
               </li>
           </ul>
-          <div class="ms-auto">
-              <a href="" class="btn bg-gradiant">Login</a>
-          </div>
       </div>
   </div>
 </nav>
 <!-- END NAVBAR -->
-</header>
 
-
-
-
-
-
-
-
+<script>
+$(document).ready(function() {
+    // Ваш код для удаления хеш-фрагмента при клике на якорную ссылку в навигационной панели
+    $('.nav-link').on('click', function(e) {
+        var href = this.getAttribute('href');
+        var myHref = href.split('#');
+        if (myHref[0] === "/" || myHref[0] === "") {
+            // Если ссылка ведет на "/", то перезагружаем страницу
+            return true;
+        }
+        e.preventDefault();
+    });
+    
+    // Добавляем обработку якорных ссылок для плавного скролла в навигационной панели
+    $('.nav-link').on('click', function(e) {
+        var href = this.getAttribute('href');
+        var target = $(href);
+        if (target.length) {
+            e.preventDefault();
+            $('html, body').animate({
+                scrollTop: target.offset().top
+            }, 1000); // Задайте желаемую продолжительность анимации
+        }
+    });
+});
+</script>

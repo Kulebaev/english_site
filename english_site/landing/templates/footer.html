@@ -1,14 +1,62 @@
 {% load static %}
-{% load l10n %} 
-<footer class="py-3 my-4">
-  <ul class="nav justify-content-center border-bottom pb-3 mb-3">
-    <li class="nav-item"><a href="/" class="nav-link px-2 text-body-secondary">Главная</a></li>
-  </ul>
-  <p class="text-center text-body-secondary" >&copy; <span id="currentYear"></span> Все права защищены.</p>
-</footer>
+<!-- footer section -->
+<section class=" section footer bg-dark overflow-hidden">
+  <div class="bg-arrow">
+      
+  </div>
+  <!-- container -->
+  <div class="container">
+      <div class="row ">
+          <div class="col-lg-6">
+              <a class="navbar-brand logo text-uppercase" href="/">
+                  <img src="{% static 'images/logo-footer.png' %}" class="logo-light" alt="" height="30">
+                  <!-- <img src="images/logo-dark.png" class="logo-dark" alt="" height="28"> -->
+              </a>
+              <p class="text-white-50 mt-2 mb-0">Добро пожаловать на English in Penza! 
+                Мы предоставляем качественные курсы английского языка для всех возрастов и уровней.</p>
 
-<script>
-  var currentYear = new Date().getFullYear();
-  
-  document.getElementById("currentYear").textContent = currentYear;
-</script>
+              <div class="footer-icon mt-4">
+                  <div class=" d-flex align-items-center">
+                      <a href="https://t.me/speakingtroubleolga" class="me-2 avatar-sm text-center" data-bs-toggle="tooltip"
+                          data-bs-placement="top" title="telegram" target="_blank">
+                          <i class="mdi mdi-telegram f-24 align-middle text-primary"></i>
+                      </a>
+                      <a href="" class="mx-2 avatar-sm text-center">
+                          <i class="mdi mdi-vk f-24 align-middle text-primary" data-bs-toggle="tooltip"
+                              data-bs-placement="top" title="vk" target="_blank"></i>
+                      </a>
+                  </div>
+
+              </div>
+          </div>
+          <div class="col-lg-6 ms-auto">
+            <h5 class="text-white">Подписка</h5>
+            <div class="input-group my-4">
+                <input type="text" class="form-control p-3" placeholder="Введите ваш email" aria-label="Email"
+                    aria-describedby="basic-addon2">
+                <a href="" class="input-group-text bg-primary text-white px-4" id="basic-addon2">Подписаться</a>
+            </div>
+            <p class="mb-0 text-white-50">Будьте в курсе всех новостей и актуальных событий. 
+              Подпишитесь на нашу рассылку, чтобы получать обновления и специальные предложения. 
+              Начните сегодня и оставайтесь в курсе!
+            </p>
+            
+          </div>
+      </div>
+  </div>
+  <!-- end container -->
+</section>
+
+<section class="bottom-footer py-4">
+  <div class="container">
+      <div class="row justify-content-center">
+          <div class="col-lg-6">
+              <p class="mb-0 text-center text-muted">©
+                  <script>document.write(new Date().getFullYear())</script> 
+                  English in Penza. Все права защищены.</p>
+          </div>
+      </div>
+  </div>
+</section>
+
+<!-- end footer -->
