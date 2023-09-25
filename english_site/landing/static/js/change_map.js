@@ -3,7 +3,10 @@ document.addEventListener('DOMContentLoaded', function () {
         var mapElement = document.getElementById('map');
         var windowWidth = window.innerWidth;
 
-        if (windowWidth <= 545) {
+        if (windowWidth <= 350) {
+            // Ширина экрана меньше или равна 545
+            mapElement.className = 'smallMap_350';
+        }else if (windowWidth <= 545) {
             // Ширина экрана меньше или равна 545
             mapElement.className = 'smallMap_540';
         } else if (mapElement.offsetWidth <= 767) {
