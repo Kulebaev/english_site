@@ -3,10 +3,15 @@ document.addEventListener('DOMContentLoaded', function () {
         var mapElement = document.getElementById('map');
         var windowWidth = window.innerWidth;
 
-        if (windowWidth <= 800) {
-            mapElement.classList.add('smallMap');
+        if (windowWidth <= 545) {
+            // Ширина экрана меньше или равна 545
+            mapElement.className = 'smallMap_540';
+        } else if (mapElement.offsetWidth <= 767) {
+            // Ширина карты меньше или равна 767
+            mapElement.className = 'smallMap_600';
         } else {
-            mapElement.classList.remove('smallMap');
+            // Все остальные случаи
+            mapElement.className = '';
         }
 
         // Обновление карты
@@ -16,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
-    // Слушаем событие изменения размера экрана
+    // Слушаем событие изменения размера окна
     window.addEventListener('resize', resizeMap);
 
     // Вызываем функцию при загрузке страницы
