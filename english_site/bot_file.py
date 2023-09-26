@@ -50,7 +50,7 @@ def receive_title(message):
 
 @bot.message_handler(content_types=['document', 'photo'])
 def receive_files(message):
-    print(chat_book_ids, chat_file_types)
+
     chat_id = message.chat.id
 
     if chat_id not in chat_file_types:
@@ -98,7 +98,7 @@ def receive_files(message):
 
 
 @bot.message_handler(commands=['exit'])
-def start(message):
+def exit(message):
 
     chat_id = message.chat.id
 
