@@ -1,0 +1,32 @@
+<div class="popup_form">
+        <div class="popup_form_inner">
+          <div class="popup_form_close"></div>
+          <div class="popup_form_title">Заполните форму </div>
+          <form action="handler.php" enctype="multipart/form-data" method="post">
+            <div class="form1">
+              <input type="hidden" name="Название формы" value="">
+              <div class="field">
+                <div class="field_title">Введите имя</div>
+                <div class="field_description"></div>
+                <div class="field_input field_input_text"><input type="text" required="required" name="Введите имя" placeholder="Введите имя" autocomplete="off"></div>
+              </div>
+              <div class="field">
+                <div class="field_title">Введите номер телефона</div>
+                <div class="field_description"></div>
+                <div class="field_input field_input_phone"><input type="text" required="required" pattern="[+)( .-]*[0-9]+[0-9+)( .-]*" minlength="6" name="Введите номер телефона" placeholder="xxx-xxx-xxx" autocomplete="off"></div>
+              </div>
+              <div class="field">
+                <div class="field_input"><input type="submit" class="submit_btn surround dark" data-hcolor="undefined" data-action="thanks" data-metrica_event="undefined" data-fb_pixel="undefined" data-vk_pixel="undefined" data-gtag_event="undefined" data-url="" data-amount="0" data-product_name="undefined" value="Заказать звонок менеджера" style="background-color:#006699; border-radius: 10em;" autocomplete="off"></div>
+              </div>
+            </div>
+          </form>
+          <div class="popup_form_text">Нажимая на кнопку, Вы принимаете <a target="_blank" href="/personal-data-1/">Положение</a> и <a target="_blank" href="/personal-data-2/">Согласие</a> на обработку персональных данных.</div>
+        </div>
+      </div>
+      <div class="popup_thanks">
+        <div class="popup_thanks_inner">
+          <div class="popup_thanks_close">X</div>
+          <div class="popup_thanks_title">Спасибо за заявку!</div>
+          <div class="popup_thanks_text">Заявка отправлена. Наш менеджер свяжется с Вами в ближайшее время.</div>
+        </div>
+      </div>
