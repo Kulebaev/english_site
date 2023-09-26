@@ -10,3 +10,10 @@ class Book(models.Model):
     
 class Image(models.Model):
     file = models.FileField(upload_to='book_images/')
+
+
+class Subscriber(models.Model):
+    email = models.EmailField(unique=True)
+
+    def __str__(self):
+        return self.email

@@ -22,7 +22,7 @@
                     </div>
 
                     <div class="custom-form mt-4">
-                        <form method="post" name="myForm" onsubmit="return validateForm()">
+                        <form method="post" name="myForm" onsubmit="return validateForm()" action="{% url 'message_text' %}">
                             {% csrf_token %}
                             <p id="error-msg" style="opacity: 1;"></p>
                         
@@ -95,7 +95,7 @@
                     <div class="flex-grow-1 ms-3">
                         <h5 class="mb-1">Электронная почта</h5>
                         <p class="f-14 mb-0 text-muted">Email: 
-                            <a href="mailto:your.email@example.com" class="text-secondary">your.email@example.com</a>
+                            <a href="mailto:info@english-in-penza.ru" class="text-secondary">info@english-in-penza.ru</a>
                         </p>
                     </div>
                 </div>
@@ -108,7 +108,7 @@
                     <div class="flex-grow-1 ms-3">
                         <h5 class="mb-1">Телефон</h5>
                         <p class="f-14 mb-0 text-muted">Телефон: 
-                            <a href="tel:+1234567890" class="text-secondary">+1 (234) 567-890</a>
+                            <a href="tel:+79099100464" class="text-secondary">+7 (909) 910-04-64</a>
                         </p>
                     </div>
                 </div>
@@ -118,7 +118,6 @@
     <!-- end container -->
 </section>
 <!-- end section -->
-
 
 <!-- script section -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/imask/6.0.3/imask.min.js"></script>

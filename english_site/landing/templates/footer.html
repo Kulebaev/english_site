@@ -25,17 +25,23 @@
                           <i class="mdi mdi-vk f-24 align-middle text-primary" data-bs-toggle="tooltip"
                               data-bs-placement="top" title="vk" target="_blank"></i>
                       </a>
+                      <a href="https://wa.me/79099100464?text=Здравствуйте!Я бы хотел записаться на пробное занятие." class="mx-2 avatar-sm text-center">
+                        <i class="mdi mdi-whatsapp f-24 align-middle text-primary" data-bs-toggle="tooltip"
+                            data-bs-placement="top" title="whatsapp" target="_blank"></i>
+                    </a>
                   </div>
 
               </div>
           </div>
           <div class="col-lg-6 ms-auto">
             <h5 class="text-white">Подписка</h5>
-            <div class="input-group my-4">
-                <input type="text" class="form-control p-3" placeholder="Введите ваш email" aria-label="Email"
-                    aria-describedby="basic-addon2">
-                <a href="" class="input-group-text bg-primary text-white px-4" id="basic-addon2">Подписаться</a>
-            </div>
+            <form method="POST" action="{% url 'subscribe' %}">
+                {% csrf_token %}
+                <div class="input-group my-4">
+                    <input type="email" name="email" class="form-control p-3" placeholder="Введите ваш email" aria-label="Email" aria-describedby="basic-addon2">
+                    <button type="submit" class="input-group-text bg-primary text-white px-4" id="basic-addon2">Подписаться</button>
+                </div>
+            </form>
             <p class="mb-0 text-white-50">Будьте в курсе всех новостей и актуальных событий. 
               Подпишитесь на нашу рассылку, чтобы получать обновления и специальные предложения. 
               Начните сегодня и оставайтесь в курсе!
